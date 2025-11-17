@@ -1,22 +1,22 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
-import Script from "next/script";
-import { BitFitMenu } from "@/components/ui/bitfit-menu";
+import type { Metadata } from 'next';
+import { Geist, Geist_Mono } from 'next/font/google';
+import './globals.css';
+import Script from 'next/script';
+import { BitFitMenu } from '@/widgets/NavigationPanel/navigation-menu';
 
 const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+  variable: '--font-geist-sans',
+  subsets: ['latin'],
 });
 
 const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  variable: '--font-geist-mono',
+  subsets: ['latin'],
 });
 
 export const metadata: Metadata = {
-  title: "BitFit - Workout Tracker",
-  description: "Track your workouts and fitness progress with BitFit",
+  title: 'BitFit - Workout Tracker',
+  description: 'Track your workouts and fitness progress with BitFit',
 };
 
 export default function RootLayout({
@@ -25,11 +25,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang='en' suppressHydrationWarning>
       <head>
         <Script
-          src="https://telegram.org/js/telegram-web-app.js?59"
-          strategy="beforeInteractive"
+          src='https://telegram.org/js/telegram-web-app.js?59'
+          strategy='beforeInteractive'
         />
       </head>
       <body
